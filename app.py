@@ -151,7 +151,7 @@ with left:
     if prompt:
         st.session_state.chat.append({"role":"user","content":prompt})
         add_activity(current, f"Received request: {prompt[:90]}")
-        with st.chat_message("user", avatar="●"): st.markdown(prompt)
+        with st.chat_message("user"): st.markdown(prompt)
         with st.chat_message("assistant", avatar="◈"):
             st.caption(f"{current} · {info['role']}")
             with st.spinner(f"{current} is thinking locally…"):
